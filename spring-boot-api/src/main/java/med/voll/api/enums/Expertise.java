@@ -1,6 +1,6 @@
-package med.voll.api.medico;
+package med.voll.api.enums;
 
-public enum Especialidade {
+public enum Expertise {
 
     ORTOPEDIA,
     CARDIOLOGIA,
