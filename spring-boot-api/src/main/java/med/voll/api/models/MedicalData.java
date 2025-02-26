@@ -9,18 +9,18 @@ import med.voll.api.enums.Expertise;
 
 public record MedicalData(
         @NotBlank
-        String nome,
+        String name,
         @NotBlank
         @Email
         String email,
 
         @NotBlank
-        String telefone,
+        String phoneNumber,
         @NotBlank
         @Pattern(regexp = "\\d{4,6}")
         String crm,
         @NotNull
         Expertise expertise,
 
-        @NotNull @Valid AddressData endereco) {
+        @NotNull @Valid AddressData address) {
 }

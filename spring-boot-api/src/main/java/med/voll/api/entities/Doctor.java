@@ -18,7 +18,7 @@ import med.voll.api.models.MedicalData;
 import med.voll.api.models.UpdateDoctorData;
 
 @Table(name = "medicos")
-@Entity(name = "Medico")
+@Entity(name = "Doctor")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -45,12 +45,12 @@ public class Doctor {
 
     public Doctor(@NonNull final MedicalData medicalData) {
         this.active = true;
-        this.name = medicalData.nome();
+        this.name = medicalData.name();
         this.email = medicalData.email();
-        this.phoneNumber = medicalData.telefone();
+        this.phoneNumber = medicalData.phoneNumber();
         this.crm = medicalData.crm();
         this.expertise = medicalData.expertise();
-        this.address = new Address(medicalData.endereco());
+        this.address = new Address(medicalData.address());
     }
 
     public void updateInfos(@NonNull final UpdateDoctorData updateDoctorData) {
